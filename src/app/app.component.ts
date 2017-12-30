@@ -16,9 +16,9 @@ export class AppComponent {
 
   constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
     this.items = af.list('/messages', {
-      query: {
-        limitToLast: 50
-      }
+      // query: {
+      //   limitToLast: 50
+      // }
     });
 
     this.user = this.afAuth.authState;

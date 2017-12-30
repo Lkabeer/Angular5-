@@ -1,17 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+$color-main: #008FEF;
+$color-bg: #EBEBEB;
+$color-light: #fff;
+$color-text: #696969;
+
 
 * {
     font-family: 'Raleway';
 }
 
 body {
-    background-color: #EBEBEB;
+    background-color: $color-bg;
     padding-top: 50px;
 }
 
+h1 {
+    color: $color-text;
+}
+
 button {
-    background: #008FEF;
+    background: $color-main;
     color: #fff;
+    border: 0;
     padding: 20px;
     width: 300px;
     text-align: center;
