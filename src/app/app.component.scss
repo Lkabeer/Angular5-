@@ -1,0 +1,21 @@
+input#message {
+    background:#fff;
+    border:none;
+    // outline: none;
+    // box-shadow:none;
+    font-size:1.6em;
+    font-weight:300;
+}
+
+#feedback-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width:100%;
+}
+
+#feedback-container p {
+    background:#fff;
+    padding: 20px;
+    color:#696969;
+}

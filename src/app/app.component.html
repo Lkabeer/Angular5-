@@ -1,17 +1,23 @@
 
-<div class="row columns">
-  <button (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
-  <button (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
+<div class="container">
 
-  <input type="text" id="message" 
+  <div class="row">
+      <button (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
+      <button (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
+  </div>
+
+  <div class="row">
+      <input autofocus type="text" id="message" 
+        class="col-12 px-3 py-2 mb-3"
         placeholder="What's your opinion about the Workshop"
         *ngIf="(user | async)?.uid"
         [(ngModel)]="msgVal" 
         (keyup.enter)="send($event.target.value)">
-  
-  <div id="details-container">
-    <p *ngFor="let item of items | async">
-      <img src="../assets/images/pin.svg" alt="{{item.message}}">
+  </div> 
+
+  <div id="feedback-container">
+    <p class="m-2" *ngFor="let item of items | async">
+      <img class="mr-2 mb-2" src="../assets/images/like.gif" alt="{{item.message}}">
       {{item.message}}
     </p>
   </div>
