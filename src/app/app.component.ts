@@ -24,4 +24,19 @@ export class AppComponent {
     this.user = this.afAuth.authState;
   }
 
+  login() {
+    this.afAuth.auth.signInAnonymously();
+  }
+
+  logout() {
+    this.afAuth.auth.signOut();
+  }
+
+  send(msg: string) {
+    this.items.push({
+      message: msg
+    });
+    this.msgVal = '';
+  }
+
 }
